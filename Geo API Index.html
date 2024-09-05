@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geolocation Example</title>
+    <title>Geolokatsiooni Näide</title>
     <style>
         #status, #map-link {
             margin-top: 20px;
@@ -33,13 +33,13 @@
         }
 
         function error() {
-          status.textContent = "Unable to retrieve your location";
+          status.textContent = "Teie asukohta ei saa määrata";
         }
 
         if (!navigator.geolocation) {
-          status.textContent = "Geolocation is not supported by your browser";
+          status.textContent = "Teie brauser ei toeta asukoha määramist";
         } else {
-          status.textContent = "Locating…";
+          status.textContent = "Otsime…";
           navigator.geolocation.getCurrentPosition(success, error);
         }
       }
